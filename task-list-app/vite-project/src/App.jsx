@@ -10,6 +10,10 @@ function App() {
   return (
     <div>
       <h1>My Tasks</h1>
+      {tasks.length === 0 && <p>No tasks for today!</p>}
+{tasks.length > 0 && tasks.every(task => task.complete) && (
+  <p>Keep up the good work!</p>
+)}
       <ul>
   {tasks.map((task) => (
     <li key={task.id}>
